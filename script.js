@@ -60,7 +60,7 @@ let currentFilter = 'All';
 let searchQuery = '';
 
 // Extract unique categories from data dynamically
-const categories = ['All', ...new Set(toolsData.map(tool => tool.category))];
+const categories = ['All', ...new Set([...toolsData.map(tool => tool.category), 'Upwork Tools'])];
 
 /**
  * Initialize the application

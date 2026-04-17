@@ -1,6 +1,14 @@
 // Application Data
 const toolsData = [
     {
+        id: 'upwork-utils',
+        title: 'Upwork Proposal Tool',
+        description: 'Write proposals quickly with Upwork Mode, featuring bold text formatting, auto-copy to clipboard, and custom themes.',
+        url: 'https://upworkutils.netlify.app/',
+        category: 'Upwork Tools',
+        icon: 'fa-solid fa-file-signature'
+    },
+    {
         id: 'pwd-gen',
         title: 'Password Generator',
         description: 'Generate secure, random passwords with customizable parameters to keep your accounts safe.',
@@ -47,14 +55,6 @@ const toolsData = [
         url: 'https://example-profile-cropper.netlify.app',
         category: 'Utility',
         icon: 'fa-solid fa-crop-simple'
-    },
-    {
-        id: 'upwork-utils',
-        title: 'Upwork Proposal Tool',
-        description: 'Write proposals quickly with Upwork Mode, featuring bold text formatting, auto-copy to clipboard, and custom themes.',
-        url: 'https://upworkutils.netlify.app/',
-        category: 'Upwork Tools',
-        icon: 'fa-solid fa-file-signature'
     }
 ];
 
@@ -97,12 +97,12 @@ function renderTools() {
     const filteredTools = toolsData.filter(tool => {
         // Check Category Match
         const matchesCategory = currentFilter === 'All' || tool.category === currentFilter;
-        
+
         // Check Search Query Match (checks title and description)
         const lowerSearchQuery = searchQuery.toLowerCase();
-        const matchesSearch = tool.title.toLowerCase().includes(lowerSearchQuery) || 
-                              tool.description.toLowerCase().includes(lowerSearchQuery);
-        
+        const matchesSearch = tool.title.toLowerCase().includes(lowerSearchQuery) ||
+            tool.description.toLowerCase().includes(lowerSearchQuery);
+
         return matchesCategory && matchesSearch;
     });
 

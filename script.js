@@ -47,6 +47,14 @@ const toolsData = [
         url: 'https://example-profile-cropper.netlify.app',
         category: 'Utility',
         icon: 'fa-solid fa-crop-simple'
+    },
+    {
+        id: 'upwork-utils',
+        title: 'Upwork Proposal Tool',
+        description: 'Write proposals quickly with Upwork Mode, featuring bold text formatting, auto-copy to clipboard, and custom themes.',
+        url: 'https://upworkutils.netlify.app/',
+        category: 'Upwork Tools',
+        icon: 'fa-solid fa-file-signature'
     }
 ];
 
